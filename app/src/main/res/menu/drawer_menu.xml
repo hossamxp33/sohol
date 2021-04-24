@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="nav_view">
+    <group android:checkableBehavior="single"
+            >
+        <item
+                android:id="@+id/home"
+                android:icon="@drawable/house_outline"
+                android:title="الرئيسية" />
+
+        <item
+                android:id="@+id/reports"
+                android:icon="@drawable/analytics"
+                android:title="تقارير" />
+        <item
+                android:id="@+id/myorder"
+                android:icon="@drawable/more"
+                android:title="حسابات بنكية" />
+        <item
+                android:id="@+id/addoffice"
+                android:icon="@drawable/more"
+                android:title="اضافة مكتب" />
+        <item
+                android:id="@+id/myoffices"
+                android:icon="@drawable/more"
+                android:title="مكاتبي" />
+
+        <item
+                android:id="@+id/mytrans"
+                android:icon="@drawable/more"
+                android:title="تحويلاتي" />
+        <item
+                android:id="@+id/changepw"
+                android:icon="@drawable/key"
+                android:title=" تغيير كلمة المرور" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+
+
+
+
+        <item
+                android:id="@+id/more"
+                android:icon="@drawable/logout"
+                android:title="االمزيد" />
+
+    </item>
+</menu>
