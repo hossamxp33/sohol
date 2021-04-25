@@ -26,8 +26,13 @@ data class Center (
     val centerID: Long? = null,
     val created: String? = null,
     val modified: String? = null,
+    val time: String? = null,
     val id: Long? = null,
+    val name: String? = null,
+    val serial: String? = null,
+    val photo: String? = null,
     val err:String? = null
+
 ) : Parcelable
 
 data class Trans (

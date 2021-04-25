@@ -35,11 +35,12 @@
                 android:name="com.codesroots.mac.cards.DataLayer.helper.MyService"
                 android:enabled="true" />
 
-        <activity android:name=".presentaion.payment.Payment"  >
+        <activity android:name=".presentaion.payment.Payment"
+                  android:theme="@style/AppTheme">
 
         </activity>
         <activity android:name=".presentaion.popup.CompanyDetailsActivity"
-                android:theme="@style/Department"
+                  android:theme="@style/Department"
                 >
 
         </activity>

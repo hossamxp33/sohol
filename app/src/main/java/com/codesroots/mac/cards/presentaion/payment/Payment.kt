@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.codesroots.mac.cards.R
 import com.codesroots.mac.cards.databinding.ActivityPaymentBinding
+import com.codesroots.mac.cards.databinding.ReceiptBinding
 import com.codesroots.mac.cards.models.Buypackge
 import com.codesroots.mac.cards.presentaion.MainActivity
 
@@ -22,26 +23,23 @@ import java.net.URL
 
 class Payment : AppCompatActivity() {
 
-
     var dataa: Buypackge? = null
-
     var  text : TextView ? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment)
-        val binding = DataBindingUtil.setContentView<ActivityPaymentBinding>(this, R.layout.activity_payment)
+        setContentView(R.layout.receipt)
+        val binding = DataBindingUtil.setContentView<ReceiptBinding>(this, R.layout.receipt)
+        var extras = intent.extras
+        val value = extras?.getParcelable<Buypackge>("myobj")
 
+      //  animation()
+        binding.buy = value
 
-text = findViewById(R.id.textView2)
-
-        animation()
-
-        home.setOnClickListener {
-                    val homeIntent = Intent(this, MainActivity::class.java)
-                                       startActivity(homeIntent)
-        }
+//        home.setOnClickListener {
+//                    val homeIntent = Intent(this, MainActivity::class.java)
+//                                       startActivity(homeIntent)
+//        }
     }
 
     override fun onBackPressed() {
