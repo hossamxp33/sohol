@@ -27,7 +27,9 @@ data class Center (
     val created: String? = null,
     val modified: String? = null,
     val id: Long? = null,
-    val err:String? = null
+    val err:String? = null,
+    val packageCodes: List<PackageCode>,
+    val company: Company
 ) : Parcelable
 
 data class Trans (
@@ -72,6 +74,7 @@ data class MyBalance (
     val usercredit: Int? = null
 )
 
+@Parcelize
 
 data class Company (
     val id: Long,
@@ -79,8 +82,7 @@ data class Company (
     val logo: String,
     val code: String,
     val created: String
-)
-
+) : Parcelable
 
 
 data class ReportDaily (
@@ -166,3 +168,13 @@ data class Package (
     val photo: String,
     val company: Company
 )
+@Parcelize
+
+data class PackageCode (
+    val id: Long,
+    val packageID: Long,
+    val code: String,
+    val active: Long,
+    val cityID: Long,
+    val created: String
+) : Parcelable
