@@ -39,6 +39,10 @@
                   android:theme="@style/AppTheme">
 
         </activity>
+        <activity android:name=".presentaion.payment.BookedSuccessful"
+                android:theme="@style/AppTheme">
+
+        </activity>
         <activity android:name=".presentaion.popup.CompanyDetailsActivity"
                   android:theme="@style/Department"
                 >

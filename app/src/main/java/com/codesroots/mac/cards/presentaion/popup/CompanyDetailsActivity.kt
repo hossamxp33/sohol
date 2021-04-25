@@ -31,7 +31,7 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
 
         Company_id = item.id
 
-        totalvalue = item.sprice
+        totalvalue = item.sprice + " IQD"
         totalvalue?.let { displaytext(it) }
 
     }

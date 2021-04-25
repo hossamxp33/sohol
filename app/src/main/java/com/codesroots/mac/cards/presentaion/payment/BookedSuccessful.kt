@@ -21,23 +21,20 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 
-class Payment : AppCompatActivity() {
+class BookedSuccessful : AppCompatActivity() {
 
     var dataa: Buypackge? = null
     var  text : TextView ? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.receipt)
-        val binding = DataBindingUtil.setContentView<ReceiptBinding>(this, R.layout.receipt)
-        var extras = intent.extras
-        val value = extras?.getParcelable<Buypackge>("myobj")
+        setContentView(R.layout.activity_payment)
+        val binding = DataBindingUtil.setContentView<ActivityPaymentBinding>(this, R.layout.activity_payment)
 
-      //  animation()
-        binding.buy = value
 
-        binding.saveBtn.setOnClickListener {
-                    val homeIntent = Intent(this, BookedSuccessful::class.java)
+
+      home.setOnClickListener {
+                    val homeIntent = Intent(this, MainActivity::class.java)
                                        startActivity(homeIntent)
         }
     }
