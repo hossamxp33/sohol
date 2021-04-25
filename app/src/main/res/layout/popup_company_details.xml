@@ -23,6 +23,10 @@
                 type="com.codesroots.mac.cards.models.CompanyDatum"/>
 
     </data>
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -111,13 +115,12 @@
                 android:layout_width="110dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/nav_bg"
                 android:fontFamily="@font/fonts"
-                android:text="شراء"
                 android:onClick="@{() -> listener.AddCardOrder(Context,viewmodel)}"
+                android:text="شراء"
 
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -217,7 +220,6 @@
                 android:layout_marginRight="16dp"
                 android:text="المجموع :"
                 android:textSize="17sp"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -229,10 +231,9 @@
                 android:layout_marginRight="16dp"
                 android:text="TextView"
                 android:textSize="17sp"
-
                 app:layout_constraintEnd_toStartOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+</ScrollView>
 </layout>

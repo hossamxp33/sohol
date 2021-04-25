@@ -679,17 +679,17 @@ class ClickHandler {
 
     }
     fun SwitchToPackages( context: Context,comid :CompanyDatum,id :String) {
+        PreferenceHelper.settype(comid.type.toString())
 
-    if (comid == null){
+    if (comid.type == 0){
     val bundle = Bundle()
     //  bundle.putParcelable("cliObj" ,clients[position] )
-    PreferenceHelper.settype(comid.type.toString())
     val frag = CompanyDetails()
     frag.arguments = bundle
     bundle.putString("packageId" , comid.id)
     ( context as MainActivity).supportFragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb,0, 0,0)
         .replace(R.id.main_frame, frag).addToBackStack(null).commit()
-}else{
+}else {
     val homeIntent = Intent(context,
         CompanyDetailsActivity()::class.java)
         homeIntent.putExtra("packageId" , id)
@@ -818,8 +818,8 @@ class ClickHandler {
 
     fun SwitchToPayment(context: Context,id:CompanyDatum,viewmodel:MainViewModel) {
 
-    val dialogBuilder = AlertDialog.Builder(( context as CompanyDetailsActivity) )
-    val inflater = ( context as CompanyDetailsActivity).getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    val dialogBuilder = AlertDialog.Builder(( context as MainActivity) )
+    val inflater = ( context as MainActivity).getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     var dialogView = inflater.inflate(R.layout.alert_add_employee, null)
 
 

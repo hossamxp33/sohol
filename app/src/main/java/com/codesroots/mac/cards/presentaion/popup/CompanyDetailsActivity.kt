@@ -1,5 +1,6 @@
 package com.codesroots.mac.cards.presentaion.popup
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -30,7 +31,7 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
 
         Company_id = item.id
 
-        totalvalue = item.sprice + "  IQD"
+        totalvalue = item.sprice + " IQD"
         totalvalue?.let { displaytext(it) }
 
     }
@@ -90,12 +91,13 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
 
 
     }
+    @SuppressLint("SetTextI18n")
     public fun display(number: Int) {
         val displayInteger = findViewById<View>(R.id.integer_number) as TextView
         val totalInteger = findViewById<View>(R.id.total) as TextView
 
      totalInteger.text = "" + (number * totalvalue!!.replace(" IQD", "")!!.toInt()) + " IQD"
-        displayInteger.text = "" + number
+        displayInteger.text = number.toString()
     }
     public fun displaytext(number: String) {
         val displayInteger = findViewById<View>(R.id.total) as TextView
