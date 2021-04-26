@@ -40,6 +40,7 @@ import com.bumptech.glide.request.target.SimpleTarget
 import com.codesroots.mac.cards.DataLayer.helper.MyService
 import com.codesroots.mac.cards.DataLayer.helper.PreferenceHelper
 import com.codesroots.mac.cards.R
+import com.codesroots.mac.cards.models.Buypackge
 import com.codesroots.mac.cards.models.CompanyDatum
 import com.codesroots.mac.cards.models.LoginData
 import com.codesroots.mac.cards.presentaion.addoffice.Register
@@ -91,6 +92,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
     lateinit var navigationView: NavigationView
 
      var company_id: String = ""
+    var  data : Buypackge ? = null
 
     @TargetApi(Build.VERSION_CODES.O)
     @RequiresApi(Build.VERSION_CODES.O)
@@ -777,7 +779,7 @@ class ClickHandler {
     fun AddCardOrder(context: Context,viewmodel:MainViewModel) {
         var MyData = context as CompanyDetailsActivity
         var pDialog : SweetAlertDialog? = null;
-
+          var total = MyData.totalvalue
         val auth = PreferenceHelper.getAuthId()
         viewmodel.AddCardOrder(MyData!!.Company_id!!,MyData!!.minteger!!.toString())
 
@@ -798,20 +800,18 @@ class ClickHandler {
                     pDialog!!.setContentText("إضغط  لطباعة الطلب")
                     pDialog!!.setConfirmText("طباعة")
                     pDialog!!.confirmButtonBackgroundColor = R.color.blue
-
                     pDialog!!.show()
 
                     pDialog!!.setConfirmClickListener {
                                         pDialog!!.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                                         pDialog!!.show();
                                               val homeIntent = Intent(context, Payment::class.java)
-                                                        homeIntent.putExtra("myobj", data)
-                                                        (context as CompanyDetailsActivity).startActivity(homeIntent)
+
+                                                    homeIntent.putExtra("myobj", data)
+                                                     homeIntent.putExtra("total", total)
+                                                        (context).startActivity(homeIntent)
                                     }
-
                                 }
-
-
                             })
                     }
     }

@@ -20,17 +20,13 @@ data class EditOrder (
 )
 @Parcelize
 data class Center (
-    val packageID: Long? = null,
-    val userID: Long? = null,
-    val mobile: String? = null,
-    val centerID: Long? = null,
-    val created: String? = null,
-    val modified: String? = null,
-    val id: Long? = null,
+    val id: Int? = null,
     val err:String? = null,
-    val packageCodes: List<PackageCode>,
-    val company: Company
-) : Parcelable
+    //val packageCodes: List<PackageCode>,
+    val company: Company? = null
+) : Parcelable{
+
+}
 
 data class Trans (
     val trans: Datatrans? = null,
@@ -75,15 +71,16 @@ data class MyBalance (
 )
 
 @Parcelize
-
 data class Company (
-    val id: Long,
-    val name: String,
-    val logo: String,
-    val code: String,
-    val created: String
+    val id: Long? = null,
+    val name: String? = null,
+    val logo: String? = null,
+    val code: String? = null,
+    val created: String? = null
 ) : Parcelable
+{
 
+}
 
 data class ReportDaily (
     val orders: List<Report>?= null,

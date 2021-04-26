@@ -30,7 +30,6 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
     override fun onItemClicked(item: CompanyDatum) {
 
         Company_id = item.id
-
         totalvalue = item.sprice + " IQD"
         totalvalue?.let { displaytext(it) }
 
@@ -95,10 +94,11 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
     public fun display(number: Int) {
         val displayInteger = findViewById<View>(R.id.integer_number) as TextView
         val totalInteger = findViewById<View>(R.id.total) as TextView
-
      totalInteger.text = "" + (number * totalvalue!!.replace(" IQD", "")!!.toInt()) + " IQD"
         displayInteger.text = number.toString()
+       totalvalue  = totalInteger.toString()
     }
+
     public fun displaytext(number: String) {
         val displayInteger = findViewById<View>(R.id.total) as TextView
 
