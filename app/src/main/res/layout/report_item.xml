@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout
         xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/layout"
@@ -41,40 +42,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
                 android:id="@+id/tvUnpaid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center"
                 android:maxLines="2"
                 android:text="@{data.mobile}"
-                android:visibility="gone"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvPreviousText"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameP" />
-
-        <TextView
-                android:id="@+id/tvPreviousText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:paddingStart="1dp"
-                android:paddingLeft="1dp"
-                android:text="  رقم :"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvTotalPrice"
-                app:layout_constraintTop_toTopOf="@+id/tvTotalPrice"
-                app:layout_constraintWidth_percent="0.22" />
 
         <TextView
                 android:id="@+id/tvTotalPrice"
@@ -173,23 +157,6 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toBottomOf="@+id/tvMessageC"-->
 <!--                app:layout_constraintWidth_percent="0.3" />-->
-
-        <TextView
-                android:id="@+id/tvDateP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:gravity="bottom|start"
-                android:text="@{data.created}"
-                android:textColor="@color/darkred"
-                android:textDirection="ltr"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toStartOf="@+id/tvNameP"
-                app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.3" />
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
