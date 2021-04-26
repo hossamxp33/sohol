@@ -213,200 +213,200 @@
                     app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/policy"
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/gray_redius"
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/policy"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="130dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@drawable/gray_redius"-->
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/send"
-                app:layout_constraintWidth_percent="0.49">
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/send"-->
+<!--                app:layout_constraintWidth_percent="0.49">-->
 
-            <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView5"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="24dp"
-                    app:cardCornerRadius="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-
-                <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/appCompatImageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/metro" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                    android:id="@+id/policy_txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:fontFamily="@font/fonts"
-                    android:gravity="center"
-                    android:text="الشروط و الاحكام"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/call_us"
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/gray_redius"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/send"
-                app:layout_constraintWidth_percent="0.49">
-
-            <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView6"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="24dp"
-                    app:cardCornerRadius="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+<!--            <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView5"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="24dp"-->
+<!--                    app:cardCornerRadius="15dp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHeight_percent="1"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
 
 
-                <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/appCompatImageView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/ionic" />
-            </androidx.cardview.widget.CardView>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/appCompatImageView5"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/metro" />-->
+<!--            </androidx.cardview.widget.CardView>-->
 
-            <TextView
-                    android:id="@+id/call_us_txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:fontFamily="@font/fonts"
-                    android:gravity="center"
-                    android:text="اتصل بنا"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            <TextView-->
+<!--                    android:id="@+id/policy_txt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:fontFamily="@font/fonts"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="الشروط و الاحكام"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bill"
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/gray_redius"
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/call_us"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="130dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@drawable/gray_redius"-->
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/call_us"
-                app:layout_constraintWidth_percent="0.49">
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/send"-->
+<!--                app:layout_constraintWidth_percent="0.49">-->
 
-            <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView7"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="24dp"
-                    app:cardCornerRadius="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-
-                <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/appCompatImageView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/dollar" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                    android:id="@+id/bill_txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:fontFamily="@font/fonts"
-                    android:gravity="center"
-                    android:text=" الفاتورة"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/server"
-                android:layout_width="0dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/gray_redius"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/call_us"
-                app:layout_constraintWidth_percent="0.49">
-
-            <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView8"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="24dp"
-                    app:cardCornerRadius="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+<!--            <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView6"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="24dp"-->
+<!--                    app:cardCornerRadius="15dp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHeight_percent="1"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
 
 
-                <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/appCompatImageView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/server1" />
-            </androidx.cardview.widget.CardView>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/appCompatImageView6"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/ionic" />-->
+<!--            </androidx.cardview.widget.CardView>-->
 
-            <TextView
-                    android:id="@+id/server_txt"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"
-                    android:fontFamily="@font/fonts"
-                    android:gravity="center"
-                    android:text="السيرفر"
-                    android:textColor="@color/white"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            <TextView-->
+<!--                    android:id="@+id/call_us_txt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:fontFamily="@font/fonts"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="اتصل بنا"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/bill"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="130dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@drawable/gray_redius"-->
+
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/call_us"-->
+<!--                app:layout_constraintWidth_percent="0.49">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView7"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="24dp"-->
+<!--                    app:cardCornerRadius="15dp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHeight_percent="1"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/appCompatImageView7"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/dollar" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <TextView-->
+<!--                    android:id="@+id/bill_txt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:fontFamily="@font/fonts"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text=" الفاتورة"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/server"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="130dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@drawable/gray_redius"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/call_us"-->
+<!--                app:layout_constraintWidth_percent="0.49">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView8"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginBottom="24dp"-->
+<!--                    app:cardCornerRadius="15dp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/comoanyName"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHeight_percent="1"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/appCompatImageView8"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/server1" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <TextView-->
+<!--                    android:id="@+id/server_txt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:fontFamily="@font/fonts"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="السيرفر"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 </layout>

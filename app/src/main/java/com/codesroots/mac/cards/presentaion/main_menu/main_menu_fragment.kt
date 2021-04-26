@@ -48,13 +48,13 @@ class main_menu_fragment : Fragment() {
         var view: MainMenuBinding =
             DataBindingUtil.inflate(inflater, R.layout.main_menu, container,false)
 
-view.callUs.setOnClickListener {
-    callUs = ContactFragment()
-    fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-        .replace(R.id.main_frame, callUs)
-        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-        .commit()
-}
+//view.callUs.setOnClickListener {
+//    callUs = ContactFragment()
+//    fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//        .replace(R.id.main_frame, callUs)
+//        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//        .commit()
+//}
         view.exchange.setOnClickListener {
             changePassword = changePassword()
             fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
@@ -79,13 +79,13 @@ view.callUs.setOnClickListener {
         view.mainPage.setOnClickListener {
             startActivity(Intent(context  , LoginActivity::class.java))
         }
-        view.policy.setOnClickListener {
-            fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-
-                .replace(R.id.main_frame, TermsFragment())
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .commit()
-        }
+//        view.policy.setOnClickListener {
+//            fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//
+//                .replace(R.id.main_frame, TermsFragment())
+//                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                .commit()
+//        }
         return  view.root
     }
 

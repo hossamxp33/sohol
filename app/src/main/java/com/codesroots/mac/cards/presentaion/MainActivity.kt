@@ -43,6 +43,7 @@ import com.codesroots.mac.cards.R
 import com.codesroots.mac.cards.models.CompanyDatum
 import com.codesroots.mac.cards.models.LoginData
 import com.codesroots.mac.cards.presentaion.addoffice.Register
+import com.codesroots.mac.cards.presentaion.bill.BillFragment
 import com.codesroots.mac.cards.presentaion.changepassword.changePassword
 import com.codesroots.mac.cards.presentaion.companydetails.fragment.CompanyDetails
 import com.codesroots.mac.cards.presentaion.main_menu.main_menu_fragment
@@ -804,7 +805,7 @@ class ClickHandler {
                     pDialog!!.setConfirmClickListener {
                                         pDialog!!.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                                         pDialog!!.show();
-                                              val homeIntent = Intent(context, Payment::class.java)
+                                              val homeIntent = Intent(context, BillFragment::class.java)
                                                         homeIntent.putExtra("myobj", data)
                                                         (context as CompanyDetailsActivity).startActivity(homeIntent)
                                     }

@@ -1,33 +1,21 @@
-package com.codesroots.mac.cards.presentaion.Bill
+package com.codesroots.mac.cards.presentaion.bill
 
 import com.codesroots.mac.cards.databinding.BillLayoutBinding
 
-package com.codesroots.mac.cards.presentaion.payment
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.codesroots.mac.cards.R
-import com.codesroots.mac.cards.databinding.ActivityPaymentBinding
-import com.codesroots.mac.cards.databinding.PaymentNewBinding
 import com.codesroots.mac.cards.models.Buypackge
 import com.codesroots.mac.cards.presentaion.MainActivity
-import com.codesroots.mac.cards.presentaion.Printer.AidlUtil
-import com.codesroots.mac.cards.presentaion.Printer.ESCUtil
-import kotlinx.android.synthetic.main.activity_payment.*
-import kotlinx.android.synthetic.main.payment_new.*
-import woyou.aidlservice.jiuiv5.IWoyouService
-import java.io.IOException
-import java.net.HttpURLConnection
-import java.net.URL
+
+import kotlinx.android.synthetic.main.bill_layout.*
 
 
 class BillFragment : AppCompatActivity() {
 
-    private var woyouService: IWoyouService? = null
 
     var dataa: Buypackge? = null
 
@@ -45,13 +33,13 @@ class BillFragment : AppCompatActivity() {
                 numbervalue.append(it.code)
                 numbervalue.append("\n")
                 numbervalue.text.toString()
-                serialvalue.append(it.id)
+                serialvalue.append(it.id.toString())
                 serialvalue.append("\n")
                 serialvalue.text.toString()
             }
 
         }
-        binding.buy = value.center
+        binding.buy = value
     }
 
     override fun onBackPressed() {
