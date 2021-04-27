@@ -38,8 +38,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
             <ProgressBar
@@ -49,15 +49,15 @@
                     android:layout_margin="30dp"
                     android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="@+id/logo"
-                    app:layout_constraintEnd_toEndOf="@+id/logo"
-                    app:layout_constraintStart_toStartOf="@+id/logo"
+                    app:layout_constraintRight_toRightOf="@+id/logo"
+                    app:layout_constraintLeft_toLeftOf="@+id/logo"
                     app:layout_constraintTop_toTopOf="parent" />
             <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/logo"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                    />
 
@@ -79,9 +79,9 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="17sp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/logo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -93,8 +93,8 @@
                 android:layout_margin="30dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="@+id/recyler"
-                app:layout_constraintEnd_toEndOf="@+id/recyler"
-                app:layout_constraintStart_toStartOf="@+id/recyler"
+                app:layout_constraintRight_toRightOf="@+id/recyler"
+                app:layout_constraintLeft_toLeftOf="@+id/recyler"
                 app:layout_constraintTop_toBottomOf="@+id/usageway" />
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyler"
@@ -106,8 +106,8 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/usageway" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -124,8 +124,8 @@
 
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/total" />
 
 
@@ -141,8 +141,8 @@
                 android:background="@drawable/nav_bg"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/recyler">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -159,7 +159,7 @@
                         android:layout_marginLeft="32dp"
                         android:src="@drawable/left"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -174,8 +174,8 @@
                         android:textColor="@color/white"
 
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/increase"
-                        app:layout_constraintStart_toEndOf="@+id/decrease"
+                        app:layout_constraintRight_toLeftOf="@+id/increase"
+                        app:layout_constraintLeft_toRightOf="@+id/decrease"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -187,7 +187,7 @@
                         android:layout_marginRight="64dp"
                         android:background="@drawable/right"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/amount"
+                        app:layout_constraintRight_toLeftOf="@+id/amount"
                         app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -203,7 +203,7 @@
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -220,7 +220,7 @@
                 android:layout_marginRight="16dp"
                 android:text="المجموع :"
                 android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <TextView
@@ -231,7 +231,7 @@
                 android:layout_marginRight="16dp"
                 android:text="TextView"
                 android:textSize="17sp"
-                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                app:layout_constraintRight_toLeftOf="@+id/textView4"
                 app:layout_constraintTop_toTopOf="@+id/textView4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

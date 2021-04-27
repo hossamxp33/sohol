@@ -35,8 +35,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         <com.viewpagerindicator.CirclePageIndicator
@@ -46,8 +46,8 @@
                 android:padding="10dip"
                 app:centered="true"
                 app:fillColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/pagerr"
-                app:layout_constraintStart_toStartOf="@+id/pagerr"
+                app:layout_constraintRight_toRightOf="@+id/pagerr"
+                app:layout_constraintLeft_toLeftOf="@+id/pagerr"
                 app:layout_constraintTop_toBottomOf="@+id/pagerr"
                 app:pageColor="#fe6464"
                 app:snap="false" />
@@ -60,8 +60,8 @@
                 android:layout_marginBottom="8dp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayouttest"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/indicator" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -73,8 +73,8 @@
                 android:background="@drawable/buttonbackground"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/textView5"
@@ -100,7 +100,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintRight_toLeftOf="@+id/textView5"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

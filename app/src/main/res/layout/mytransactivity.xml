@@ -47,7 +47,7 @@
 
 <!--                android:onClick="@{() -> listener.transactions(Context,data,ViewModel,1)}"-->
 <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
 <!--                android:src="@drawable/money"-->
 <!--                tools:srcCompat="@drawable/money">-->
 

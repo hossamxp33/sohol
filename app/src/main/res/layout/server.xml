@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-        xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/layout"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layout"
+
         >
 
     <data>
 
-
+        <variable
+                name="LocationUseCase"
+                type="com.codesroots.mac.cards.models.MyLocationUseCase"/>
+        <variable
+                name="ViewModel"
+                type="com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel"/>
+        <variable
+                name="presenter"
+                type="com.codesroots.mac.cards.presentaion.ordersfragment.Presenter"/>
+        <variable
+                name="data"
+                type="com.codesroots.mac.cards.models.CompanyDatum"/>
     </data>
+
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/gray">
+            android:background="@color/dark_grey">
 <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/icon"
         android:layout_width="match_parent"
@@ -23,8 +38,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/server"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -35,20 +50,21 @@
             android:layout_marginTop="8dp"
             android:text="أستخدم السيرفر الخاص بنا لاعادة شحن الرصيد "
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
             android:background="@drawable/reduisbackground"
+            android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6">
 
 
@@ -62,7 +78,7 @@
                 android:text="اسم المنتج"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,21 +88,23 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/light_violet_reduisbackground"
-                app:layout_constraintEnd_toStartOf="@+id/product_name"
-
+                app:layout_constraintRight_toLeftOf="@+id/product_name"
                 app:layout_constraintTop_toBottomOf="@+id/comoanyName"
                 app:layout_constraintWidth_percent="0.7">
 
-            <TextView
-                    android:id="@+id/name"
+            <Spinner
+                    android:id="@+id/order_spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="اسم المنتج"
-                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:popupBackground="@drawable/light_violet_reduisbackground"
+                    android:spinnerMode="dialog"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
@@ -99,7 +117,7 @@
                 android:text="اختيار الفئة"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -107,25 +125,28 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-
-                android:background="@drawable/green_background"
-                app:layout_constraintEnd_toStartOf="@+id/product_state"
-                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/light_violet_reduisbackground"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/product_state"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-                app:layout_constraintWidth_percent="0.7">
+                app:layout_constraintWidth_percent="0.5">
 
-
-            <TextView
-                    android:id="@+id/_order_state"
+            <Spinner
+                    android:id="@+id/order_type_spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="تم ارساله بنجاح"
-                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:popupBackground="@drawable/light_violet_reduisbackground"
+                    android:gravity="left"
+                    android:spinnerMode="dialog"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
@@ -136,7 +157,7 @@
                 android:layout_marginEnd="16dp"
                 android:text="يرجي ادخال رقم الهاتف"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -146,7 +167,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/light_violet_reduisbackground"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/orderDate_txt"
                 app:layout_constraintWidth_percent="0.75">
 
@@ -157,9 +178,24 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/phone"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+            <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/transparent"
+                    android:hint="اكتب رقم التليفون"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/order_date"
+                    app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -169,8 +205,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/gray_redius"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
                 app:layout_constraintWidth_percent="0.4">
 
@@ -181,8 +217,8 @@
                     android:text="الفاتورة"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -195,15 +231,15 @@
                 android:layout_marginEnd="24dp"
                 android:text="أسم المكتب"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toStartOf="@+id/textView10"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/textView10"
                 app:layout_constraintTop_toTopOf="@+id/textView10"
                 app:layout_constraintWidth_percent="0.75">
 
@@ -215,7 +251,7 @@
                     android:text="تعبئة رصيد"
                     android:textColor="@color/gray"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -228,7 +264,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="سعر المنتج"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -236,18 +272,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="32dp"
-                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintRight_toLeftOf="@+id/textView11"
                 app:layout_constraintTop_toTopOf="@+id/textView11">
 
             <TextView
-                    android:id="@+id/paid_amount"
+                    android:id="@+id/price_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="00.00"
                     android:textColor="@color/gray"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -266,7 +302,6 @@
                 android:textColor="@color/white"
                 android:textSize="8dp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/save_btn"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
@@ -278,22 +313,25 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/verifieduser"
                 app:layout_constraintBottom_toBottomOf="@+id/Confirm_text"
-                app:layout_constraintEnd_toEndOf="@+id/Confirm_text"
+                app:layout_constraintRight_toRightOf="@+id/Confirm_text"
                 app:layout_constraintTop_toTopOf="@+id/Confirm_text" />
+
         <TextView
-                android:id="@+id/save_btn"
+                android:id="@+id/send"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/light_violet_reduisbackground"
                 android:gravity="center_vertical"
+                android:onClick="@{(v) -> presenter.AddClick()}"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
                 android:text="تقديم الطلب"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="383dp" />
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Confirm_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@ import com.codesroots.mac.cards.DataLayer.usecases.getTime
 import com.codesroots.mac.cards.R
 import com.codesroots.mac.cards.databinding.DialogCustomViewBinding
 import com.codesroots.mac.cards.databinding.MytransItemBinding
+import com.codesroots.mac.cards.databinding.ServerBinding
 import com.codesroots.mac.cards.databinding.ServerFragmentBinding
 import com.codesroots.mac.cards.models.CompanyData
 import com.codesroots.mac.cards.models.CompanyDatum
@@ -82,26 +83,26 @@ lateinit  var spinner: Spinner
     ): View? {
         // Inflate the layout for this fragment
 
-        var view: ServerFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.server_fragment, container,false)
+        var view: ServerBinding = DataBindingUtil.inflate(inflater, R.layout.server, container,false)
 
-        pager = view.serverPager
+      //  pager = view.serverPager
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         viewModel.GetMyorders();
         viewModel.GetMyImages(PreferenceHelper.getToken())
         view.data = Companydata
         viewModel.getcompanyData()
 
-        viewModel.SliderDataResponseLD?.observe(this , Observer {
-            pager!!.offscreenPageLimit = 3
-            //  pager!!.pageMargin = 20
-            pager!!.clipChildren = false
-            pager!!.clipToPadding = false
-            //   pager!!.setPadding(100, 0, 50, 0)
-            view.serverPager.adapter = it?.let { it1 -> SliderAdapter(activity!!, it1) }
-            indicator.setViewPager(view.serverPager)
-            it?.size?.let { it1 -> init(it1) }
-
-        })
+//        viewModel.SliderDataResponseLD?.observe(this , Observer {
+//            pager!!.offscreenPageLimit = 3
+//            //  pager!!.pageMargin = 20
+//            pager!!.clipChildren = false
+//            pager!!.clipToPadding = false
+//            //   pager!!.setPadding(100, 0, 50, 0)
+//            view.serverPager.adapter = it?.let { it1 -> SliderAdapter(activity!!, it1) }
+//            indicator.setViewPager(view.serverPager)
+//            it?.size?.let { it1 -> init(it1) }
+//
+//        })
 
         spinner = view.orderSpinner
         spinner_type = view.orderTypeSpinner
@@ -109,7 +110,7 @@ lateinit  var spinner: Spinner
         val date = Calendar.getInstance().time
         val formatter = SimpleDateFormat.getDateTimeInstance() //or use getDateInstance()
         val formatedDate = formatter.format(date)
-        view.processTimeText.text = formatedDate
+    //    view.processTimeText.text = formatedDate
 
         viewModel.CompanyResponseLD?.observe(this, Observer {
             CompanyList = it.companies

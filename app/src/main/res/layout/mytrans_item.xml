@@ -45,7 +45,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvMessageC"
                 app:layout_constraintWidth_percent="0.3"
                 android:layout_marginLeft="8dp"
@@ -66,7 +66,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvDatetext"
+                app:layout_constraintLeft_toRightOf="@+id/tvDatetext"
                 app:layout_constraintTop_toBottomOf="@+id/ivProfileP"
                 app:layout_constraintWidth_percent="0.3"
                 android:layout_marginLeft="6dp" />
@@ -87,7 +87,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvPreviousText"
+                app:layout_constraintLeft_toRightOf="@+id/tvPreviousText"
                 app:layout_constraintTop_toTopOf="@id/tvPreviousText"  />
 
         <TextView
@@ -103,9 +103,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileP"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileP"
 
-                app:layout_constraintStart_toStartOf ="@+id/tvMessageC"
+                app:layout_constraintLeft_toLeftOf ="@+id/tvMessageC"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameP"
                 app:layout_constraintWidth_percent="0.22" />
 
@@ -120,7 +120,7 @@
                 android:textColor="@color/darkgreen"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/value"
+                app:layout_constraintLeft_toRightOf="@+id/value"
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintTop_toTopOf="@+id/value" />
 
@@ -137,9 +137,9 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileP"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileP"
 
-                app:layout_constraintStart_toStartOf="@+id/tvMessageC"
+                app:layout_constraintLeft_toLeftOf="@+id/tvMessageC"
                 app:layout_constraintTop_toBottomOf="@+id/tvPreviousText"
                 app:layout_constraintWidth_percent="0.22" />
 
@@ -149,7 +149,7 @@
                 android:id="@+id/ivProfileP"
                 android:layout_width="0dp"
                 android:layout_height="75dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.25">
 
@@ -159,7 +159,7 @@
                     android:layout_width="match_parent"
 
                     android:scaleType="fitXY"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.25"
                     app:srcCompat="@drawable/delivery_concept" />
@@ -185,7 +185,7 @@
                 android:textColor="@color/black"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileP"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileP"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.45" />
 

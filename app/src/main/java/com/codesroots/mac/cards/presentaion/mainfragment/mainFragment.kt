@@ -15,6 +15,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
@@ -26,8 +28,10 @@ import com.codesroots.mac.cards.databinding.MainFragmentBinding
 import com.codesroots.mac.cards.presentaion.mainfragment.Adapter.MainAdapter
 import com.codesroots.mac.cards.presentaion.mainfragment.Adapter.SliderAdapter
 import com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel
+import com.codesroots.mac.cards.presentaion.ordersfragment.OrdersFragment
 import kotlinx.android.synthetic.main.main_adapter.*
 import kotlinx.android.synthetic.main.main_fragment.*
+import kotlinx.android.synthetic.main.main_menu.*
 import java.util.*
 import android.view.Window as Window1
 
@@ -40,6 +44,7 @@ class mainFragment  : Fragment(){
     private var pager: ViewPager? = null
     var  text : TextView? = null
     var  recyclerView : RecyclerView? = null
+    lateinit var myorders: OrdersFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,7 +90,13 @@ class mainFragment  : Fragment(){
             it?.size?.let { it1 -> init(it1) }
 
         })
-
+view.constraintLayouttest.setOnClickListener {
+    myorders = OrdersFragment()
+  fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+        .replace(R.id.main_frame, myorders)
+        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+        .commit()
+}
 
         animation()
         return view.root;

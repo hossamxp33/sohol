@@ -47,8 +47,8 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintBottom_toTopOf="@+id/btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <ImageView
@@ -57,8 +57,8 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/logo"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -79,8 +79,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/linear_background"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
 
             <EditText
                     android:id="@+id/username"
@@ -103,7 +103,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/user"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/username"
+                    app:layout_constraintRight_toRightOf="@+id/username"
                     app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,8 +117,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/linear_background"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
 
             <EditText
                     android:id="@+id/password"
@@ -136,7 +136,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/unlock"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/password"
+                    app:layout_constraintRight_toRightOf="@+id/password"
                     app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -149,8 +149,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/linear_background"
                 app:layout_constraintBottom_toTopOf="@+id/register"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
 
             <ImageView
                     android:layout_width="wrap_content"
@@ -159,7 +159,7 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/more"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/additional_information"
+                    app:layout_constraintRight_toRightOf="@+id/additional_information"
                     app:layout_constraintTop_toTopOf="parent" />
 
             <EditText

@@ -47,7 +47,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/orderidtext"
+                app:layout_constraintLeft_toRightOf="@+id/orderidtext"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameP" />
 
         <TextView
@@ -65,7 +65,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvTotalPrice"
+                app:layout_constraintLeft_toRightOf="@+id/tvTotalPrice"
                 app:layout_constraintTop_toTopOf="@+id/tvTotalPrice"
                 app:layout_constraintWidth_percent="0.22" />
 
@@ -83,7 +83,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvPreviousText"
+                app:layout_constraintLeft_toRightOf="@+id/tvPreviousText"
                 app:layout_constraintTop_toTopOf="@id/tvPreviousText"  />
 
         <TextView
@@ -99,7 +99,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toStartOf ="@+id/tvMessageC"
+                app:layout_constraintLeft_toLeftOf ="@+id/tvMessageC"
                 app:layout_constraintTop_toBottomOf="@+id/tvTotalPrice"
                 app:layout_constraintWidth_percent="0.22" />
         <TextView
@@ -115,7 +115,7 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvMessageC"
+                app:layout_constraintLeft_toRightOf="@+id/tvMessageC"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameP"
                 app:layout_constraintWidth_percent="0.15"
                 android:layout_marginLeft="4dp"
@@ -127,7 +127,7 @@
                 android:id="@+id/ivProfileP"
                 android:layout_width="0dp"
                 android:layout_height="75dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.25">
 
@@ -138,7 +138,7 @@
                     app:imageResourcee="@{data.myordersPackage.photo}"
 
                     android:scaleType="fitXY"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.25"
                     app:srcCompat="@drawable/delivery_concept" />
@@ -164,7 +164,7 @@
                 android:textColor="@color/black"
                 android:textSize="12dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileP"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileP"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.45" />
 
@@ -182,7 +182,7 @@
                 android:textSize="11sp"
                 android:textStyle="bold"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/ivProfileP"
+                app:layout_constraintLeft_toRightOf="@+id/ivProfileP"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameP"
                 app:layout_constraintWidth_percent="0.15"
                 android:layout_marginLeft="6dp"
@@ -202,7 +202,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvMessageC"
                 app:layout_constraintWidth_percent="0.3"
                 android:layout_marginLeft="8dp"
@@ -223,7 +223,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHeight_percent="0.3"
-                app:layout_constraintStart_toEndOf="@+id/tvDatetext"
+                app:layout_constraintLeft_toRightOf="@+id/tvDatetext"
                 app:layout_constraintTop_toBottomOf="@+id/tvMessageC"
                 app:layout_constraintWidth_percent="0.3"
                 android:layout_marginLeft="6dp" />
@@ -242,7 +242,7 @@
                 android:textSize="12sp"
                 android:onClick="@{() -> listener.ConfirmOrder(data.id,viewmodel,Context)}"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintTop_toBottomOf="@+id/tvMessageC"
                 app:layout_constraintWidth_percent="0.3" />

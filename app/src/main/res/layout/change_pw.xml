@@ -11,8 +11,8 @@
             android:id="@+id/constraintLayout6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -21,8 +21,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/exchange"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
         </ImageView>
@@ -35,8 +35,8 @@
                 android:layout_marginBottom="16dp"
                 android:text="تغيير أسم و كلمة المرور"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -54,9 +54,9 @@
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/reduisbackground"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
                 app:layout_constraintVertical_bias="0.0">
 
@@ -66,8 +66,8 @@
                     android:layout_height="60dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/verified_user"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
             </ImageView>
@@ -80,8 +80,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/red_linear_background"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView">
 
                 <EditText
@@ -105,7 +105,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/useralt"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/new_name"
+                        app:layout_constraintRight_toRightOf="@+id/new_name"
                         app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,8 +117,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/red_linear_background"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
                 <EditText
@@ -140,7 +140,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/lock"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -152,8 +152,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/red_linear_background"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
                 <EditText
@@ -175,7 +175,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/lock"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/newPW"
+                        app:layout_constraintRight_toRightOf="@+id/newPW"
                         app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -188,8 +188,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/red_linear_background"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                 <EditText
@@ -211,7 +211,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/lock"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/ConfirmPW"
+                        app:layout_constraintRight_toRightOf="@+id/ConfirmPW"
                         app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
