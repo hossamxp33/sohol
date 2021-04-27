@@ -682,7 +682,7 @@ class ClickHandler {
     fun SwitchToPackages( context: Context,comid :CompanyDatum,id :String) {
         PreferenceHelper.settype(comid.type.toString())
 
-    if (comid.type == 0){
+    if (comid.type != 5){
     val bundle = Bundle()
     //  bundle.putParcelable("cliObj" ,clients[position] )
     val frag = CompanyDetails()

@@ -10,7 +10,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.codesroots.mac.Tajnaz"
+        applicationId "com.codesroots.mac.shool"
         minSdkVersion 23
         targetSdkVersion 29
         multiDexEnabled true

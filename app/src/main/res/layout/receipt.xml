@@ -167,7 +167,7 @@
                             android:id="@+id/order_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{Buy.center.created}"
+                            android:text="@{Buy.center.company.created}"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -200,7 +200,7 @@
                         app:layout_constraintWidth_percent="0.75">
 
                     <TextView
-                            android:id="@+id/pin"
+                            android:id="@+id/numbervalue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="تاريخ الطلب"

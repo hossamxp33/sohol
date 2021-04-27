@@ -22,7 +22,7 @@ data class EditOrder (
 data class Center (
     val id: Int? = null,
     val err:String? = null,
-    //val packageCodes: List<PackageCode>,
+    val packageCodes: List<PackageCode>,
     val company: Company? = null
 ) : Parcelable{
 

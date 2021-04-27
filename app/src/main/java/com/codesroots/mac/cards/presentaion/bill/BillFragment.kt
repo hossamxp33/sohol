@@ -22,7 +22,7 @@ class BillFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bill_layout)
-        val binding = DataBindingUtil.setContentView<BillLayoutBinding>(this, R.layout.bill_layout)
+        val binding = DataBindingUtil.setContentView<BillLayoutBinding>(this, R.layout.receipt)
 
         var extras = intent.extras
         val value = extras?.getParcelable<Buypackge>("myobj")
