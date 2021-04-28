@@ -80,7 +80,7 @@ public class CompanyDetailsActivity  : AppCompatActivity(), ContentListener {
             MainAdapter = PopUpAdapter(viewModel,this, it.data!!,this)
             recyler.layoutManager = GridLayoutManager(this,3, GridLayoutManager.VERTICAL, false)
             recyler.adapter = MainAdapter;
-
+if (data?.size != null)
             setImageResourcee(logo,it.data!!.get(0).photo)
 
             progressBar.setVisibility(View.GONE)

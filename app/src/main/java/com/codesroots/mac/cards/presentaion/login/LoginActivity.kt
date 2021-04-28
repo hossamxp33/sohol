@@ -34,8 +34,8 @@ class LoginActivity : AppCompatActivity() {
         PreferenceHelper(this)
       setContentView(R.layout.activity_signin)
          animation()
-
 Log.i("token",PreferenceHelper.getToken())
+
         if (checkUserLogin(this))    startActivity(Intent(this  , MainActivity::class.java))
 
 

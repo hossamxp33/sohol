@@ -28,12 +28,15 @@ import com.codesroots.mac.cards.databinding.DialogCustomViewBinding
 import com.codesroots.mac.cards.databinding.MytransItemBinding
 import com.codesroots.mac.cards.databinding.ServerBinding
 import com.codesroots.mac.cards.databinding.ServerFragmentBinding
+import com.codesroots.mac.cards.models.Buypackge
 import com.codesroots.mac.cards.models.CompanyData
 import com.codesroots.mac.cards.models.CompanyDatum
 import com.codesroots.mac.cards.presentaion.MainActivity
+import com.codesroots.mac.cards.presentaion.bill.BillFragment
 import com.codesroots.mac.cards.presentaion.mainfragment.Adapter.SliderAdapter
 import com.codesroots.mac.cards.presentaion.mainfragment.viewmodel.MainViewModel
 import com.codesroots.mac.cards.presentaion.payment.Payment
+import com.codesroots.mac.cards.presentaion.popup.CompanyDetailsActivity
 import com.codesroots.mac.cards.presentaion.reportsFragment.ReportsFragment
 import com.codesroots.mac.cards.presentaion.snack
 import com.google.android.gms.analytics.internal.zzy.v
@@ -63,6 +66,7 @@ class OrdersFragment : Fragment() {
 
     var CompanyDetailsList:List<CompanyDatum>? = null
     var package_id:String? = ""
+    var dataa: Buypackge? = null
 
     var Price:String? = ""
 
@@ -115,7 +119,7 @@ lateinit  var spinner: Spinner
         viewModel.CompanyResponseLD?.observe(this, Observer {
             CompanyList = it.companies
             var arrayadapter =  CompanyList!!.
-                filter { companyDatum -> companyDatum.id == "15" || companyDatum.id == "33"  || companyDatum.id == "42"}
+                filter { companyDatum -> companyDatum.type == 5}
                 spinner.adapter = activity?.applicationContext?.
                 let { it1 -> ArrayAdapter(it1, R.layout.spinner, arrayadapter.map { it.name }) }
         })
@@ -250,7 +254,7 @@ view.send.setOnClickListener {
                     println(view!!.phone_number.text.toString())
                     println(Companydata!!.id!!)
 
-                    viewModel.BuyPackage(1,package_id!!,view!!.phone_number.text.toString(),"server")
+                    viewModel.AddCardOrder(package_id!!,"1")
 
 
                     if (viewModel.BuyPackageResponseLD?.hasObservers() == false) {
@@ -262,7 +266,7 @@ view.send.setOnClickListener {
                                 dialogView.text.text = it.center!!.err!!
                                 dialogView.text.textColor = Color.RED
                             } else {
-
+                                dataa = it
                                 if (it!!.center!!.id != null) {
 
                                     val dialogBuilder: AlertDialog.Builder = AlertDialog.Builder(context!!,R.style.LLDialog)
@@ -286,8 +290,10 @@ view.send.setOnClickListener {
                 val Cancel_button: Button = dialogView2.findViewById(R.id.done)
 
                 done_button.setOnClickListener {
-                    activity!!.supportFragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                        .replace(R.id.main_frame, ReportsFragment()).addToBackStack(null).commit()
+                    val homeIntent = Intent(context, BillFragment::class.java)
+                    homeIntent.putExtra("myobj", dataa)
+                    context!!.startActivity(homeIntent)
+
                     alertDialog2.dismiss()
                 }
                 Cancel_button.setOnClickListener {

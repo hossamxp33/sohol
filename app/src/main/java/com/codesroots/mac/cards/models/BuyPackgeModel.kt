@@ -10,7 +10,9 @@ import kotlinx.android.parcel.RawValue
 import org.jetbrains.anko.db.NULL
 @Parcelize
 data class Buypackge (
-    val center: Center? = null
+    val center: Center? = null,
+    val order: Myorders? = null
+
 ):Parcelable {
 }
 
@@ -22,6 +24,10 @@ data class EditOrder (
 data class Center (
     val id: Int? = null,
     val err:String? = null,
+    val price:String? = null,
+    val buy_price:String? = null,
+    val created:String? = null,
+    @SerializedName("package_codes")
     val packageCodes: List<PackageCode>,
     val company: Company? = null
 ) : Parcelable{
@@ -136,26 +142,25 @@ data class Myordersdata (
     val orders: List<Myorders>?= null,
     val myorders: List<Myorders>?= null
 )
-
+@Parcelize
 data class Myorders (
-    val id: Long,
+    val id: Long?= null,
     @SerializedName("package_id")
-    val packageID: Long,
+    val packageID: Long?= null,
     @SerializedName("user_id")
-    val userID: Long,
+    val userID: Long?= null,
     @SerializedName("center_id")
-    val centerID: Long,
-    val created: String,
-    val modified: String,
-    val approve: Long,
-    val mobile: String,
-    val name: String,
-
+    val centerID: Long?= null,
+    val created: String?= null,
+    val modified: String?= null,
+    val approve: Long?= null,
+    val mobile: String?= null,
+    val name: String?= null,
     @SerializedName("package")
-    val myordersPackage: Package
-)
+    val myordersPackage: Package?= null
+) : Parcelable
 
-
+@Parcelize
 data class Package (
     val id: Long,
     val name: String,
@@ -164,7 +169,8 @@ data class Package (
     val price: String,
     val photo: String,
     val company: Company
-)
+) : Parcelable
+
 @Parcelize
 
 data class PackageCode (

@@ -8,10 +8,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.codesroots.mac.cards.R
+import com.codesroots.mac.cards.databinding.ReceiptBinding
 import com.codesroots.mac.cards.models.Buypackge
 import com.codesroots.mac.cards.presentaion.MainActivity
 
 import kotlinx.android.synthetic.main.bill_layout.*
+import kotlinx.android.synthetic.main.receipt.*
 
 
 class BillFragment : AppCompatActivity() {
@@ -21,8 +23,8 @@ class BillFragment : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.bill_layout)
-        val binding = DataBindingUtil.setContentView<BillLayoutBinding>(this, R.layout.receipt)
+        setContentView(R.layout.receipt)
+        val binding = DataBindingUtil.setContentView<ReceiptBinding>(this, R.layout.receipt)
 
         var extras = intent.extras
         val value = extras?.getParcelable<Buypackge>("myobj")
@@ -33,9 +35,9 @@ class BillFragment : AppCompatActivity() {
                 numbervalue.append(it.code)
                 numbervalue.append("\n")
                 numbervalue.text.toString()
-                serialvalue.append(it.id.toString())
-                serialvalue.append("\n")
-                serialvalue.text.toString()
+                expire.append(it.id.toString())
+                expire.append("\n")
+                expire.text.toString()
             }
 
         }
