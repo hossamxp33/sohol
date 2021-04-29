@@ -48,44 +48,49 @@ class main_menu_fragment : Fragment() {
         var view: MainMenuBinding =
             DataBindingUtil.inflate(inflater, R.layout.main_menu, container,false)
 
-//view.callUs.setOnClickListener {
-//    callUs = ContactFragment()
-//    fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-//        .replace(R.id.main_frame, callUs)
-//        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//        .commit()
-//}
+view.callUs.setOnClickListener {
+    callUs = ContactFragment()
+    fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+        .replace(R.id.main_frame, callUs)
+        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+        .addToBackStack(null).commit()
+}
         view.exchange.setOnClickListener {
             changePassword = changePassword()
             fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
                 .replace(R.id.main_frame, changePassword)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .commit()
+                .addToBackStack(null).commit()
         }
         view.send.setOnClickListener {
             sendSecretFragment = SendSecretFragment()
             fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
                 .replace(R.id.main_frame, sendSecretFragment)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .commit()
+                .addToBackStack(null).commit()
         }
         view.reports.setOnClickListener {
             reportFragment = ReportsFragment()
             fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
                 .replace(R.id.main_frame, reportFragment)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .commit()
+                .addToBackStack(null).commit()
         }
+
         view.mainPage.setOnClickListener {
-            startActivity(Intent(context  , LoginActivity::class.java))
+            mainPage = mainFragment()
+            fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+                .replace(R.id.main_frame, mainPage)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .addToBackStack(null).commit()
         }
-//        view.policy.setOnClickListener {
-//            fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-//
-//                .replace(R.id.main_frame, TermsFragment())
-//                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-//                .commit()
-//        }
+        view.policy.setOnClickListener {
+            fragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+                .replace(R.id.main_frame, TermsFragment())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .addToBackStack(null).commit()
+
+        }
         return  view.root
     }
 

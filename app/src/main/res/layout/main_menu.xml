@@ -317,7 +317,7 @@
                 android:layout_height="130dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/gray_redius"
-
+                android:visibility="gone"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/call_us"
                 app:layout_constraintWidth_percent="0.49">
@@ -366,6 +366,7 @@
                 android:layout_height="130dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/gray_redius"
+                android:visibility="gone"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/call_us"
                 app:layout_constraintWidth_percent="0.49">

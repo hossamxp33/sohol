@@ -76,7 +76,7 @@ import kotlin.collections.HashMap
 import kotlin.collections.HashSet
 
 
-class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: MainViewModel
     private var map: HashMap<String, HashSet<String>>? = null
@@ -440,9 +440,9 @@ if (message.contains("تعريفي")) {
 
 //        drawerToggle.isDrawerIndicatorEnabled = true
      //   drawerLayout.addDrawerListener(drawerToggle)
-        animation()
+
     //    drawerToggle.syncState()
-        nav_view.setNavigationItemSelectedListener(this)
+       // nav_view.setNavigationItemSelectedListener(this)
         homeFragment = mainFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_frame, homeFragment)
@@ -500,13 +500,13 @@ if (message.contains("تعريفي")) {
 
 
             }
-            if (PreferenceHelper.getUserGroupId() == 2) {
-                navigationView.getMenu().findItem(R.id.addoffice).setVisible(true);
-
-            }else {
-                navigationView.getMenu().findItem(R.id.addoffice).setVisible(false);
-
-            }
+//            if (PreferenceHelper.getUserGroupId() == 2) {
+//                navigationView.getMenu().findItem(R.id.addoffice).setVisible(true);
+//
+//            }else {
+//                navigationView.getMenu().findItem(R.id.addoffice).setVisible(false);
+//
+//            }
 
 
 
@@ -571,93 +571,89 @@ println(PreferenceHelper.getUserGroupId())
     }
 
 
-    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
-
-        when (menuItem.itemId) {
-            R.id.home -> {
-                homeFragment = mainFragment()
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                    .replace(R.id.main_frame, homeFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-
-
-            }
-            R.id.reports -> {
-                reportsFragment = ReportsFragment()
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                    .replace(R.id.main_frame, reportsFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-            }
-            R.id.more -> {
-            moreFragment = MenuFragment()
-            supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                .replace(R.id.main_frame, moreFragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                .commit()
-        }
-            R.id.mytrans -> {
-                mytransfragment = mytranActivty()
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                    .replace(R.id.main_frame, mytransfragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-            }
-            R.id.myorder -> {
-//                myorders = OrdersFragment()
+//    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+//
+//        when (menuItem.itemId) {
+//            R.id.home -> {
+//                homeFragment = mainFragment()
 //                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-//                    .replace(R.id.main_frame, myorders)
+//                    .replace(R.id.main_frame, homeFragment)
 //                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
 //                    .commit()
-            }
-
-            R.id.myoffices -> {
-                myoffices = myofficesFragment()
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                    .replace(R.id.main_frame, myoffices)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-            }
-
-            R.id.addoffice -> {
-                val intent1 = Intent(applicationContext, Register::class.java)
-
-                startActivity(intent1)
-
-            }
-            R.id.changepw -> {
-                changepw = changePassword()
-                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
-                    .replace(R.id.main_frame, changepw)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-            }
-        }
-
-      drawerLayout.closeDrawer(GravityCompat.START)
-        drawerLayout.isEnabled = false
 //
-        return false
-    }
+//
+//            }
+//            R.id.reports -> {
+//                reportsFragment = ReportsFragment()
+//                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//                    .replace(R.id.main_frame, reportsFragment)
+//                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                    .commit()
+//            }
+//            R.id.more -> {
+//            moreFragment = MenuFragment()
+//            supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//                .replace(R.id.main_frame, moreFragment)
+//                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                .commit()
+//        }
+//            R.id.mytrans -> {
+//                mytransfragment = mytranActivty()
+//                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//                    .replace(R.id.main_frame, mytransfragment)
+//                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                    .commit()
+//            }
+//            R.id.myorder -> {
+////                myorders = OrdersFragment()
+////                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+////                    .replace(R.id.main_frame, myorders)
+////                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+////                    .commit()
+//            }
+//
+//            R.id.myoffices -> {
+//                myoffices = myofficesFragment()
+//                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//                    .replace(R.id.main_frame, myoffices)
+//                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                    .commit()
+//            }
+//
+//            R.id.addoffice -> {
+//                val intent1 = Intent(applicationContext, Register::class.java)
+//
+//                startActivity(intent1)
+//
+//            }
+//            R.id.changepw -> {
+//                changepw = changePassword()
+//                supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.ttb, 0, 0,0)
+//                    .replace(R.id.main_frame, changepw)
+//                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+//                    .commit()
+//            }
+//        }
+//
+//      drawerLayout.closeDrawer(GravityCompat.START)
+//        drawerLayout.isEnabled = false
+////
+//        return false
+//    }
 
     override fun onBackPressed() {
+        PreferenceHelper.setToken(null,this)
         if(drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.isDrawerOpen(GravityCompat.START)
         }
         else{
         super.onBackPressed()
+
             }
     }
 
-    private fun animation(){
-        navigationView = nav_view
-        val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
-        navigationView!!.animation = ttb
 
 
-
-    }
 }
 
 
@@ -691,8 +687,11 @@ class ClickHandler {
     val frag = CompanyDetails()
     frag.arguments = bundle
     bundle.putString("packageId" , comid.id)
-    ( context as MainActivity).supportFragmentManager!!.beginTransaction().setCustomAnimations(R.anim.ttb,0, 0,0)
-        .replace(R.id.main_frame, frag).addToBackStack(null).commit()
+    ( context as MainActivity).supportFragmentManager!!
+        .beginTransaction()
+        .setCustomAnimations(R.anim.ttb,0, 0,0)
+        .replace(R.id.main_frame, frag)
+        .addToBackStack(null).commit()
 }else {
     val homeIntent = Intent(context,
         CompanyDetailsActivity()::class.java)
